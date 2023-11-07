@@ -1,8 +1,11 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import { Box, Button, Link, Typography } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { useLocation } from "react-router-dom";
 
 const Main = () => {
+  const { search } = useLocation();
+  const isWithImage = Boolean(new URLSearchParams(search).get("withImage"));
   const isMobile = useMediaQuery("(max-width:700px)");
 
   return isMobile ? (
@@ -13,12 +16,15 @@ const Main = () => {
         <span style={{ color: "#2C7EF8" }}>$14 each </span>
         ($84.00 total!)
       </Typography>
-      <img
-        alt="product-image"
-        src="product-image.png"
-        style={{ width: "100%" }}
-      />
-      <Box display="flex" gap="24px">
+      {isWithImage && (
+        <img
+          alt="product-image"
+          src="product-image.png"
+          style={{ width: "100%", marginTop: "24px" }}
+        />
+      )}
+
+      <Box display="flex" gap="24px" marginTop="24px">
         <Box
           bgcolor="#2C7EF8"
           width="80px"
@@ -65,7 +71,7 @@ const Main = () => {
           </Box>
         </Box>
       </Box>
-      <Typography fontSize="12px" textAlign="center">
+      <Typography fontSize="12px" textAlign="center" marginTop="16px">
         Simply plug a Clarifion into any standard outlet and replace bulky,
         expensive air purifiers with a simple.
       </Typography>
