@@ -243,6 +243,7 @@ const Main = () => {
             marginTop="24px"
           >
             <img alt="review" src="review.png" />
+
             <Typography fontSize="16px" marginTop="18px">
               “As soon as the Clarifions arrived I put one in my bedroom. This
               was late in the afternoon. When I went to the bedroom in the
@@ -253,8 +254,9 @@ const Main = () => {
         </Box>
         <Box>
           <Typography fontSize="32px">
-            <span>ONE TIME ONLY</span> special price for 6 extra Clarifion for
-            only <span>$14 each </span>
+            <span style={{ color: "#2C7EF8" }}>ONE TIME ONLY</span> special
+            price for 6 extra Clarifion for only{" "}
+            <span style={{ color: "#2C7EF8" }}>$14 each </span>
             ($84.00 total!)
           </Typography>
           <Box display="flex" flexDirection="column">
@@ -285,7 +287,7 @@ const Main = () => {
                     >
                       $180
                     </Typography>
-                    <Typography fontSize="22px" fontColor="#2C7EF8">
+                    <Typography fontSize="22px" style={{ color: "#2C7EF8" }}>
                       $84
                     </Typography>
                   </Box>
@@ -349,7 +351,9 @@ const Main = () => {
             >
               <img alt="percentage" src="percentage.png" />
               <Typography fontSize="16px">
-                Save 53% and get 6 extra Clarifision for only $14 Each.
+                Save <span style={{ color: "#2C7EF8" }}>53%</span> and get{" "}
+                <span style={{ color: "#2C7EF8" }}>6 extra Clarifision </span>
+                for only <span style={{ color: "#2C7EF8" }}>$14 Each</span>.
               </Typography>
             </Box>
             <Button
